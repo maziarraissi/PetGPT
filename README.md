@@ -1,4 +1,8 @@
-# LLaMA (Large Language Model Meta AI)
+# PetGPT
+
+Thanks to [LLaMA](https://github.com/facebookresearch/llama) and [Alpaca-LoRA](https://github.com/tloen/alpaca-lora), you can train your own PetGPT at home. This GitHub repository offers a step by step guide in its README.md file.
+
+## LLaMA (Large Language Model Meta AI)
 
 This repository assumes that you have already found a way to download the checkpoints and tokenizer for [LLaMA](https://github.com/facebookresearch/llama) (e.g., by filling out this [google form](https://forms.gle/jk851eBVbX1m5TAv5)). You should create a subdirectory (named ```LLaMA```) within this repository having a structure similar to the following tree.
 
@@ -53,7 +57,7 @@ torchrun --nproc_per_node 1 example.py --ckpt_dir ../LLaMA/7B --tokenizer_path .
 ```
 
 
-# Converting LLaMA to Hugging Face
+## Converting LLaMA to Hugging Face
 
 Create an empty directory within this repository called ```LLaMA_HF```. The following two scripts will then help you convert the LLaMA checkpoints and tokenizer to the Hugging Face format. 
 
@@ -78,7 +82,7 @@ LaMA_HF
 └── tokenizer.model
 ```
 
-# Exploratory Data Analysis
+## Exploratory Data Analysis
 
 Clone the [Alpaca-LoRA](https://github.com/tloen/alpaca-lora) repository.
 
@@ -92,7 +96,7 @@ The Alpaca-LoRA repository is already included here for reproducibility purposes
 exploratory_data_analysis.ipynb
 ```
 
-# Fine Tuning
+## Fine Tuning
 
 You can now use the following commands to finetune the LLaMA model on the ```alpaca_data_cleaned.json``` dataset.
 
@@ -149,7 +153,7 @@ alpaca-lora/output/
 3 directories, 32 files
 ```
 
-# Generating Text
+## Generating Text
 
 Here is how you can interact with the finetuned model.
 
